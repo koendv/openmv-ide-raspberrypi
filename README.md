@@ -2,6 +2,8 @@
 
 Building and packaging the [openmv-ide](https://github.com/openmv/openmv-ide) on the raspberry pi for *raspios-buster-arm64*
 
+![](screenshot.png) 
+
 ## Installation
 
 Download the binary from [releases](https://github.com/koendv/openmv-ide-raspberrypi/releases) and install:
