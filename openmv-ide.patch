@@ -1,0 +1,40 @@
+diff --git a/src/plugins/openmv/openmvplugin.cpp b/src/plugins/openmv/openmvplugin.cpp
+index 15a38b861e..36b7fa8e01 100644
+--- a/src/plugins/openmv/openmvplugin.cpp
++++ b/src/plugins/openmv/openmvplugin.cpp
+@@ -2830,35 +2830,6 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
+         }
+     }
+ 
+-    if(QMessageBox::warning(Core::ICore::dialogParent(),
+-        tr("Unregistered OpenMV Cam Detected"),
+-        tr("Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.\n\n"
+-           "Would you like to register your OpenMV Cam now?"),
+-        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
+-    == QMessageBox::Yes)
+-    {
+-        if(registerOpenMVCamDialog(board, id)) return;
+-    }
+-
+-    if(QMessageBox::warning(Core::ICore::dialogParent(),
+-        tr("Unregistered OpenMV Cam Detected"),
+-        tr("Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.\n\n"
+-           "Would you like to register your OpenMV Cam now?"),
+-        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
+-    == QMessageBox::Yes)
+-    {
+-        if(registerOpenMVCamDialog(board, id)) return;
+-    }
+-
+-    if(QMessageBox::warning(Core::ICore::dialogParent(),
+-        tr("Unregistered OpenMV Cam Detected"),
+-        tr("OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...\n\n"
+-           "Would you like to register your OpenMV Cam now?"),
+-        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
+-    == QMessageBox::Yes)
+-    {
+-        if(registerOpenMVCamDialog(board, id)) return;
+-    }
+ }
+ 
+ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id)
