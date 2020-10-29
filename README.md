@@ -49,5 +49,6 @@ cd ~/src/openmv-ide
 - [camera](https://www.aliexpress.com/item/1005001475058305.html)
 - [firmware](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/SDK/openmv/Firmwares/)
 - [upload tool](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/Soft)
+- [mounting lcd and camera](https://m.bilibili.com/video/av286164536)
 
 not truncated
