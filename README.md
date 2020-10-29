@@ -42,5 +42,10 @@ Build:
 cd ~/src/openmv-ide
 ./make.py
 ```
+## Hardware
+
+- [camera](https://www.aliexpress.com/item/1005001475058305.html)
+- [firmware](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/SDK/openmv/Firmwares/)
+- [upload tool](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/Soft)
 
 not truncated
