@@ -37,7 +37,8 @@ git clone --recursive https://github.com/openmv/openmv-ide.git
 Remove nag screens:
 ```
 cd ~/src/openmv-ide/qt-creator/
-patch -p1 < ../../openmv-ide.patch
+wget https://raw.githubusercontent.com/koendv/openmv-ide-raspberrypi/main/openmv-ide.patch
+patch -p1 < openmv-ide.patch
 ```
 Build:
 ```
@@ -49,6 +50,6 @@ cd ~/src/openmv-ide
 - [camera](https://www.aliexpress.com/item/1005001475058305.html)
 - [firmware](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/SDK/openmv/Firmwares/)
 - [upload tool](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/Soft)
-- [mounting lcd and camera](https://m.bilibili.com/video/av286164536)
+- [installing lcd](https://m.bilibili.com/video/av286164536)
 
 not truncated

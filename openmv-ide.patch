@@ -1,11 +1,12 @@
 diff --git a/src/plugins/openmv/openmvplugin.cpp b/src/plugins/openmv/openmvplugin.cpp
-index 15a38b861e..36b7fa8e01 100644
+index 15a38b861e..39253c3284 100644
 --- a/src/plugins/openmv/openmvplugin.cpp
 +++ b/src/plugins/openmv/openmvplugin.cpp
-@@ -2830,35 +2830,6 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
+@@ -2829,36 +2829,6 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
+             return;
          }
      }
- 
+-
 -    if(QMessageBox::warning(Core::ICore::dialogParent(),
 -        tr("Unregistered OpenMV Cam Detected"),
 -        tr("Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.\n\n"
@@ -38,3 +39,21 @@ index 15a38b861e..36b7fa8e01 100644
  }
  
  bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id)
+@@ -5128,17 +5098,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
+                 || ((major2 == match.captured(1).toInt()) && (minor2 == match.captured(2).toInt()) && (patch2 < match.captured(3).toInt())))
+                 {
+                     m_versionButton->setText(m_versionButton->text().append(tr(" - [ out of date - click here to updgrade ]")));
+-
+-                    QTimer::singleShot(1, this, [this] {
+-                        if(QMessageBox::warning(Core::ICore::dialogParent(),
+-                            tr("Connect"),
+-                            tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"),
+-                            QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
+-                        == QMessageBox::Ok)
+-                        {
+-                            OpenMVPlugin::updateCam(true);
+-                        }
+-                    });
+                 }
+                 else
+                 {
