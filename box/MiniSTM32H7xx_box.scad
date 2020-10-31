@@ -14,7 +14,7 @@ d2=3.1;
 top_z=4.0;
 bottom_z=6.2;
 pcb_z=1.6;
-cam_x=14.5;
+cam_x=h1-14.5;
 cam_y=79.0;
 cam_d=8.0;
 
