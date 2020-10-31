@@ -51,5 +51,6 @@ cd ~/src/openmv-ide
 - [firmware](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/SDK/openmv/Firmwares/)
 - [upload tool](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/Soft)
 - [installing lcd](https://m.bilibili.com/video/av286164536)
+- [box](https://github.com/koendv/openmv-ide-raspberrypi/blob/main/case/MiniSTM32H7xx_box.stl)
 
 not truncated

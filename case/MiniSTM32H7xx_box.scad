@@ -287,8 +287,8 @@ module printer_ready() {
 // --------------------------------------------------------------------------------
 
 //top();
-bottom();
+//bottom();
+//bidi();
 //assembly();
 //projection()
-//printer_ready();
-//bidi();
+printer_ready();
