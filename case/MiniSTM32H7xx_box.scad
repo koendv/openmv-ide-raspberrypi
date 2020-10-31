@@ -275,11 +275,11 @@ module 3dmodel() {
 // --------------------------------------------------------------------------------
 
 module printer_ready() {
-    translate([0,0,pcb_z+top_z])
+    translate([0,0,min_wall_thickness+top_z])
     rotate([180,0,0])
     top();
     
-    translate([h1+10,0,pcb_z+bottom_z])
+    translate([h1+10,0,min_wall_thickness+pcb_z+bottom_z])
     rotate([180,0,0])
     bottom();
 }
