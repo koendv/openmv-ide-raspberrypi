@@ -47,10 +47,12 @@ cd ~/src/openmv-ide
 ```
 ## Hardware
 
-- [camera](https://www.aliexpress.com/item/1005001475058305.html)
-- [firmware](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/SDK/openmv/Firmwares/)
-- [upload tool](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/Soft)
-- [installing lcd](https://m.bilibili.com/video/av286164536)
-- [box](https://github.com/koendv/openmv-ide-raspberrypi/blob/main/box/MiniSTM32H7xx_box.stl)
+Notes about the camera hardware I'm using with OpenMV.
 
-not truncated
+- [camera](https://www.aliexpress.com/item/1005001475058305.html) with lcd screen. Runs micropython.
+- How to [install the lcd](https://m.bilibili.com/video/av286164536)
+- camera [firmware](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/SDK/openmv/Firmwares/)
+- [tool](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/Soft) to upload firmware to the camera
+- [3d-printable box](https://github.com/koendv/openmv-ide-raspberrypi/blob/main/box/MiniSTM32H7xx_box.stl) for the camera
+
+*not truncated*
