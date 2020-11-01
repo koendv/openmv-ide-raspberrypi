@@ -53,6 +53,6 @@ Notes about the camera hardware I'm using with OpenMV.
 - How to [install the lcd](https://m.bilibili.com/video/av286164536)
 - camera [firmware](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/SDK/openmv/Firmwares/)
 - [tool](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/Soft) to upload firmware to the camera
-- [3d-printable box](https://github.com/koendv/openmv-ide-raspberrypi/blob/main/box/MiniSTM32H7xx_box.stl) for the camera
+- [3d-printable box](box/MiniSTM32H7xx_box.stl) for the camera
 
 *not truncated*
