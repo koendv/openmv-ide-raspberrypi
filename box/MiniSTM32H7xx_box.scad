@@ -11,6 +11,7 @@ w2=86.0;
 d1=5.2;
 r1=d1/2;
 d2=3.1;
+d3=d2+2*min_wall_thickness;
 top_z=4.0;
 bottom_z=6.2;
 pcb_z=1.6;
@@ -90,16 +91,17 @@ module pcb_holes(){
 }
 
 module base_body(){
+    d=d2+2*min_wall_thickness;
     difference() {
         hull(){
             translate([r1, r1, 0])
-            circle(d=d1);
+            circle(d=d3);
             translate([r1, w2-r1, 0])
-            circle(d=d1);
+            circle(d=d3);
             translate([h1-r1, w2-r1, 0])
-            circle(d=d1);
+            circle(d=d3);
             translate([h1-r1, r1, 0])
-            circle(d=d1);
+            circle(d=d3);
         }
         pcb_holes();
     }
@@ -184,9 +186,7 @@ module bottom() {
     difference() {
         base(bottom_z+pcb_z);
         camera();
-        linear_extrude(pcb_z)
-        offset(clearance_fit)
-        pcb_body();
+        pcb_cutout();
         
         translate([h1/2,w2/6,pcb_z+bottom_z+min_wall_thickness])
         small_text("Mini H7");
@@ -197,6 +197,21 @@ module camera() {
     w=cam_d+clearance_fit;
     translate([cam_x,cam_y,eps1])
     cylinder(d=w, h=inf);
+}
+
+module pcb_cutout() {
+    translate([0,0,-eps2])
+    linear_extrude(pcb_z+eps2)
+    hull(){
+        translate([r1, r1, 0])
+        circle(d=d3);
+        translate([r1, w1-r1, 0])
+        circle(d=d3);
+        translate([h1-r1, w1-r1, 0])
+        circle(d=d3);
+        translate([h1-r1, r1, 0])
+        circle(d=d3);
+    }
 }
 
 // --------------------------------------------------------------------------------
