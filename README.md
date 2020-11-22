@@ -55,5 +55,6 @@ Notes about the camera hardware I'm using with OpenMV.
 - camera [firmware](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/SDK/openmv/Firmwares/)
 - [tool](https://gitee.com/WeAct-TC/MiniSTM32H7xx/tree/master/Soft) to upload firmware to the camera
 - [3d-printable box](https://github.com/koendv/weact-mini-stm32h7xx-box/) for the camera
+- How to modify an [ov2640 camera module for infrared](https://marksbench.com/electronics/removing-ir-filter-from-esp32-cam/)
 
 *not truncated*
