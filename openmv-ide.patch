@@ -1,7 +1,16 @@
 diff --git a/src/plugins/openmv/openmvplugin.cpp b/src/plugins/openmv/openmvplugin.cpp
-index e2441c3a0d..320f3505f1 100644
+index e2441c3a0d..175b6d9c11 100644
 --- a/src/plugins/openmv/openmvplugin.cpp
 +++ b/src/plugins/openmv/openmvplugin.cpp
+@@ -2028,7 +2028,7 @@ void OpenMVPlugin::extensionsInitialized()
+ 
+     QLoggingCategory::setFilterRules(QStringLiteral("qt.network.ssl.warning=false")); // https://stackoverflow.com/questions/26361145/qsslsocket-error-when-ssl-is-not-used
+ 
+-    if(!isNoShow()) connect(Core::ICore::instance(), &Core::ICore::coreOpened, this, [this] {
++    if(0) connect(Core::ICore::instance(), &Core::ICore::coreOpened, this, [this] {
+ 
+         QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+ 
 @@ -2829,36 +2829,6 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
              return;
          }
