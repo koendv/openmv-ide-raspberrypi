@@ -1,5 +1,5 @@
 diff --git a/src/plugins/openmv/openmvplugin.cpp b/src/plugins/openmv/openmvplugin.cpp
-index 15a38b861e..39253c3284 100644
+index e2441c3a0d..320f3505f1 100644
 --- a/src/plugins/openmv/openmvplugin.cpp
 +++ b/src/plugins/openmv/openmvplugin.cpp
 @@ -2829,36 +2829,6 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
@@ -39,7 +39,7 @@ index 15a38b861e..39253c3284 100644
  }
  
  bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id)
-@@ -5128,17 +5098,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
+@@ -5194,17 +5164,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                  || ((major2 == match.captured(1).toInt()) && (minor2 == match.captured(2).toInt()) && (patch2 < match.captured(3).toInt())))
                  {
                      m_versionButton->setText(m_versionButton->text().append(tr(" - [ out of date - click here to updgrade ]")));
