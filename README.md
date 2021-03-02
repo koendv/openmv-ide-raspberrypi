@@ -1,21 +1,21 @@
 # raspberry pi openmv-ide
 
-Building and packaging the [openmv-ide](https://github.com/openmv/openmv-ide) on the raspberry pi for *raspios-buster-arm64*
+Building and packaging the [openmv-ide](https://github.com/openmv/openmv-ide) on the raspberry pi.
 
-![](screenshot.png) 
+![](images/screenshot.png) 
 
 ## Installation
 
 Download the binary from [releases](https://github.com/koendv/openmv-ide-raspberrypi/releases) and execute. 
 
-For 32 bit:
+On 32 bit systems:
 
 ```
 $ chmod +x OpenMV_IDE-2.6.9-armhf.AppImage
 $ ./OpenMV_IDE-2.6.9-armhf.AppImage
 ```
 
-For 64 bit:
+On 64 bit systems:
 
 ```
 $ chmod +x OpenMV_IDE-2.6.9-aarch64.AppImage
@@ -69,7 +69,7 @@ EOD
 cp bin/openmv.png appdir/openmv-ide.png
 ```
 
-### for 32 bit:
+### On 32 bit systems:
 
 ```
 7z x -oappdir/usr openmv-ide-linux-arm-2.6.9-installer-archive.7z
@@ -86,7 +86,7 @@ and test:
 ./OpenMV_IDE-armhf.AppImage
 ```
 
-### for 64 bit:
+### On 64 bit systems:
 
 ```
 7z x -oappdir/usr openmv-ide-linux-arm64-2.6.9-installer-archive.7z
