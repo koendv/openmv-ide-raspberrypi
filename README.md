@@ -6,20 +6,25 @@ Building and packaging the [openmv-ide](https://github.com/openmv/openmv-ide) on
 
 ## Installation
 
-Download the binary from [releases](https://github.com/koendv/openmv-ide-raspberrypi/releases) and install:
+Download the binary from [releases](https://github.com/koendv/openmv-ide-raspberrypi/releases) and execute. 
+
+For 32 bit:
 
 ```
-apt-get update
-apt-get install p7zip-full
-mkdir -p /opt/openmv-ide
-cd /opt/openmv-ide
-7z x openmv-ide-linux-arm64-2.6.6-installer-archive.7z
+$ chmod +x OpenMV_IDE-2.6.9-armhf.AppImage
+$ ./OpenMV_IDE-2.6.9-armhf.AppImage
 ```
 
-To run, type:
+For 64 bit:
+
 ```
-$ /opt/openmv-ide/bin/openmvide
+$ chmod +x OpenMV_IDE-2.6.9-aarch64.AppImage
+$ ./OpenMV_IDE-2.6.9-aarch64.AppImage
 ```
+
+If you like this, maybe you want to buy me a cup of tea:
+
+[![ko-fi](images/kofibutton.svg)](https://ko-fi.com/Q5Q03LPDQ)
 
 ## Building
 
@@ -45,6 +50,81 @@ Build:
 cd ~/src/openmv-ide
 ./make.py
 ```
+
+### for 32 bit:
+
+Create AppImage. 
+
+```
+mkdir -p appdir/usr
+7z x -oappdir/usr openmv-ide-linux-arm-2.6.9-installer-archive.7z
+```
+Create desktop shortcut and icon:
+```
+cat > appdir/openmv-ide.desktop <<EOD
+[Desktop Entry]
+Type=Application
+Exec=openmvide
+Path=/usr/bin/openmvide
+Icon=openmv-ide
+Name=OpenMV IDE
+GenericName=The IDE of choice for OpenMV Cam Development.
+Terminal=false
+Categories=Development;IDE;
+MimeType=text/x-python;
+X-AppImage-Version=2.6.9
+EOD
+cp bin/openmv.png appdir/openmv-ide.png
+```
+Create AppImage. From *https://github.com/AppImage/AppImageKit/releases/* download *AppRun-armhf* and *appimagetool-armhf.AppImage*
+```
+cp ~/Downloads/AppRun-armhf appdir/AppRun
+chmod +x appdir/AppRun
+~/Downloads/appimagetool-armhf.AppImage ./appdir
+```
+and test:
+```
+./OpenMV_IDE-armhf.AppImage
+```
+
+
+### for 64 bit:
+
+Create AppImage. 
+
+```
+mkdir -p appdir/usr
+7z x -oappdir/usr openmv-ide-linux-arm64-2.6.9-installer-archive.7z
+```
+
+Create desktop shortcut and icon:
+```
+cat > appdir/openmv-ide.desktop <<EOD
+[Desktop Entry]
+Type=Application
+Exec=openmvide
+Path=/usr/bin/openmvide
+Icon=openmv-ide
+Name=OpenMV IDE
+GenericName=The IDE of choice for OpenMV Cam Development.
+Terminal=false
+Categories=Development;IDE;
+MimeType=text/x-python;
+X-AppImage-Version=2.6.9
+EOD
+cp bin/openmv.png appdir/openmv-ide.png
+```
+From *https://github.com/AppImage/AppImageKit/releases/* download *AppRun-aarch64* and *appimagetool-aarch64.AppImage*
+```
+cp ~/Downloads/AppRun-aarch64 appdir/AppRun
+chmod +x appdir/AppRun
+~/Downloads/appimagetool-aarch64.AppImage ./appdir
+```
+and test:
+```
+./OpenMV_IDE-aarch64.AppImage
+```
+
 ## Hardware
 
 Notes about the camera hardware I'm using with OpenMV.

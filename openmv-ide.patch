@@ -48,21 +48,3 @@ index e2441c3a0d..175b6d9c11 100644
  }
  
  bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id)
-@@ -5194,17 +5164,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
-                 || ((major2 == match.captured(1).toInt()) && (minor2 == match.captured(2).toInt()) && (patch2 < match.captured(3).toInt())))
-                 {
-                     m_versionButton->setText(m_versionButton->text().append(tr(" - [ out of date - click here to updgrade ]")));
--
--                    QTimer::singleShot(1, this, [this] {
--                        if(QMessageBox::warning(Core::ICore::dialogParent(),
--                            tr("Connect"),
--                            tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"),
--                            QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
--                        == QMessageBox::Ok)
--                        {
--                            OpenMVPlugin::updateCam(true);
--                        }
--                    });
-                 }
-                 else
-                 {
