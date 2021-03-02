@@ -50,17 +50,9 @@ Build:
 cd ~/src/openmv-ide
 ./make.py
 ```
-
-### for 32 bit:
-
-Create AppImage. 
-
-```
-mkdir -p appdir/usr
-7z x -oappdir/usr openmv-ide-linux-arm-2.6.9-installer-archive.7z
-```
 Create desktop shortcut and icon:
 ```
+mkdir -p appdir/usr
 cat > appdir/openmv-ide.desktop <<EOD
 [Desktop Entry]
 Type=Application
@@ -76,6 +68,13 @@ X-AppImage-Version=2.6.9
 EOD
 cp bin/openmv.png appdir/openmv-ide.png
 ```
+
+### for 32 bit:
+
+```
+7z x -oappdir/usr openmv-ide-linux-arm-2.6.9-installer-archive.7z
+```
+
 Create AppImage. From *https://github.com/AppImage/AppImageKit/releases/* download *AppRun-armhf* and *appimagetool-armhf.AppImage*
 ```
 cp ~/Downloads/AppRun-armhf appdir/AppRun
@@ -87,34 +86,13 @@ and test:
 ./OpenMV_IDE-armhf.AppImage
 ```
 
-
 ### for 64 bit:
 
-Create AppImage. 
-
 ```
-mkdir -p appdir/usr
 7z x -oappdir/usr openmv-ide-linux-arm64-2.6.9-installer-archive.7z
 ```
 
-Create desktop shortcut and icon:
-```
-cat > appdir/openmv-ide.desktop <<EOD
-[Desktop Entry]
-Type=Application
-Exec=openmvide
-Path=/usr/bin/openmvide
-Icon=openmv-ide
-Name=OpenMV IDE
-GenericName=The IDE of choice for OpenMV Cam Development.
-Terminal=false
-Categories=Development;IDE;
-MimeType=text/x-python;
-X-AppImage-Version=2.6.9
-EOD
-cp bin/openmv.png appdir/openmv-ide.png
-```
-From *https://github.com/AppImage/AppImageKit/releases/* download *AppRun-aarch64* and *appimagetool-aarch64.AppImage*
+Create AppImage. From *https://github.com/AppImage/AppImageKit/releases/* download *AppRun-aarch64* and *appimagetool-aarch64.AppImage*
 ```
 cp ~/Downloads/AppRun-aarch64 appdir/AppRun
 chmod +x appdir/AppRun
