@@ -22,6 +22,12 @@ $ chmod +x OpenMV_IDE-2.6.9-aarch64.AppImage
 $ ./OpenMV_IDE-2.6.9-aarch64.AppImage
 ```
 
+Install udev rules for OpenMV:
+```
+$ wget https://raw.githubusercontent.com/koendv/openmv-ide-raspberrypi/main/setup.sh
+$ ./setup.sh
+```
+
 If you like this, maybe you want to buy me a cup of tea:
 
 [![ko-fi](images/kofibutton.svg)](https://ko-fi.com/Q5Q03LPDQ)
