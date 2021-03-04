@@ -6,6 +6,12 @@ Building and packaging the [openmv-ide](https://github.com/openmv/openmv-ide) on
 
 ## Installation
 
+Install udev rules for OpenMV:
+```
+$ wget https://raw.githubusercontent.com/koendv/openmv-ide-raspberrypi/main/setup.sh
+$ ./setup.sh
+```
+
 Download the binary from [releases](https://github.com/koendv/openmv-ide-raspberrypi/releases) and execute. 
 
 On 32 bit systems:
@@ -20,12 +26,6 @@ On 64 bit systems:
 ```
 $ chmod +x OpenMV_IDE-2.6.9-aarch64.AppImage
 $ ./OpenMV_IDE-2.6.9-aarch64.AppImage
-```
-
-Install udev rules for OpenMV:
-```
-$ wget https://raw.githubusercontent.com/koendv/openmv-ide-raspberrypi/main/setup.sh
-$ ./setup.sh
 ```
 
 If you like this, maybe you want to buy me a cup of tea:
